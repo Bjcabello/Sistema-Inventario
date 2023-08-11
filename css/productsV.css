@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     font-family: "Roboto", Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 .container-fluid{
@@ -16,19 +17,19 @@
 /* header */
 header{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: url("../img/logistica.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+   
 }
 .sombra{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0, 0.7);
-
 }
 /**/
 
@@ -54,15 +55,11 @@ nav .nav-link{
 }
 /*Navbar fin*/
 /* tabla */
-.cont-b-t{
-    width: 100%;
-    height: 100%;
-}
 
 
 .cont-table{
-    margin-top: 20%;
-    width: 70%; 
+    width: 99%;
+    max-width: 1000px;
     height: 20%;
     margin: 0 auto;
     border: 2px solid rgb(109, 88, 214,0.2);
@@ -72,8 +69,20 @@ nav .nav-link{
     transition: linear 1s;
     box-shadow: 4px 4px 4px black;
 }
-
-
+.table{
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+.table th, .table td{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+tr{
+    text-align: center;
+}
 th{
     border: 2px solid #28095d;
     text-align: center;
@@ -88,4 +97,23 @@ td{
     background-color: rgb(153, 71, 71);
     font-size: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .table{
+        width: 80%;
+        height: auto;
+    }
+    th{
+        border: 2px solid #28095d;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    td{
+        width: 100px;
+        height: auto;
+        word-wrap: break-word;
+    }
+    
+}
+
 

@@ -20,13 +20,13 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="collapse navbar-collapse text-center" id="navbarNav">
                             <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="../index.php"><i class="fa-solid fa-house"></i> INICIO</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../Añadir.php">Añadir Producto</a>
+                                <a class="nav-link" href="../Añadir.php"><i class="fa-solid fa-plus"></i> AÑADIR PRODUCTO</a>
                             </li>
                             </ul>
                         </div>
@@ -38,7 +38,7 @@
                     <table class="table table-success table-striped">
                         <thead class="table-primary">
                         <tr>
-                            <th scope="col">Id</th>
+                            <th scope="col">id</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Descripcion</th>
                             <th scope="col">Precio</th>
@@ -51,12 +51,11 @@
                         ?>
                         <form action="../controller/C_Update.php" method="post">
                             <tr>
-                                <td><input type="text" id="disabledTextInput" value="<?php echo $pro['id_productos']?>" name="id" class="form-control inp-m "></td>
-                                <td><input type="text" id="disabledTextInput" value="<?php echo $pro['Nombre']?>" name="Nombre" class="form-control inp-m "></td>
-                                <td>  <textarea class="form-control" value="" name="Descripcion" id="floatingTextarea"><?php echo $pro['Descripcion']?></textarea></td>
-                                <td><input type="text" id="disabledTextInput" value="<?php echo $pro['Precio']?>" name="Precio" class="form-control inp-m "></td>
-                                <td><button type="button" class="btn btn-secondary ">Actualizar</button></td>
-
+                                <td><input type="text" class=" form-control inp-m" value="<?php echo $pro['id_productos']?>" name="id" readonly></td>
+                                <td><input type="text" class="form-control inp-m"  value="<?php echo $pro['Nombre']?>" name="Nombre"></td>
+                                <td><textarea  class=" form-control inp-m" value="" name="Descripcion" cols="10" rows="4"><?php echo $pro['Descripcion']?></textarea></td>
+                                <td><input  class=" form-control inp-m" type="text" value="<?php echo $pro['Precio']?>" name="Precio"></td>
+                                <td><button  class="btn btn-secondary actualizar" onclick="msnUpdate(3)"><i class="fa-solid fa-rotate-right"></i></td> 
                             </tr>
                         </form>
                             
@@ -69,6 +68,8 @@
         </header>     
     </div>     
 </div>
+<script src="../js/function.js"></script>
+<script src="https://kit.fontawesome.com/45f871d301.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>

@@ -20,21 +20,21 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
+                  <a class="nav-link active" aria-current="page" href="../index.php"><i class="fa-solid fa-house"></i> INICIO</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="../Añadir.php">Añadir Producto</a>
+                  <a class="nav-link" aria-current="page" href="../Añadir.php"><i class="fa-solid fa-plus"></i> AÑADIR PRODUCTO</a>
                 </li>
-                
+
               </ul>
             </div>
         </nav>  
         <!-- tabla -->
         <div class="cont-table" >
-            <table class="table table-success table-striped">
+            <table class="table table-success table-striped over" data-bs-spy="scroll">
               <thead class="table-primary">
                 <tr>
                   <th scope="col">Nombre</th>
@@ -51,9 +51,9 @@
                 <tr>
                   <td><?php echo $pro['Nombre']?></td>
                   <td><?php echo $pro['Descripcion']?></td>
-                  <td><?php echo $pro['Precio']?></td>
-                  <td class="cont-edit"><a  class ="btn btn-success" role="button" href="../controller/C_Edit.php?id=<?php echo $pro["id_productos"];?>">Editar producto</a></td>
-                  <td class="cont-delete"><a class= "btn btn-danger" role="button" href="../controller/C_Delete.php?id=<?php echo $pro["id_productos"];?>">Eliminar producto</a></td>
+                  <td class="text-justify"><?php echo $pro['Precio']?></td>
+                  <td class="cont-edit"><a  class ="btn btn-success"  role="button" href="../controller/C_Edit.php?id=<?php echo $pro["id_productos"];?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                  <td class="cont-delete"><a class= "btn btn-danger" onclick="msnDelete(1)" role="button" href="../controller/C_Delete.php?id=<?php echo $pro["id_productos"];?>"><i class="fa-solid fa-trash"></i></a></td>
                 </tr>
 
                 <?php
@@ -66,6 +66,9 @@
     </header>    
   </div>     
 </div>
+<script src="../js/function.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://kit.fontawesome.com/45f871d301.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>

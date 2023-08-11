@@ -3,7 +3,7 @@
 require('../models/conection.php');
 
 //la variable $id va guardar con el metodo get y traemos el id
-$id = $_Get['id'];
+$id = $_GET['id'];
 
 // Creamos un objeto para acceder a la clase "Conection"
 $con = new Conection();

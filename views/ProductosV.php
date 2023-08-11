@@ -21,16 +21,16 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse text-center" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                       <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+                       <a class="nav-link active" aria-current="page" href="index.php"><i class="fa-solid fa-house"></i> INICIO</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Inventario.php">Inventario</a>
+                      <a class="nav-link" href="Inventario.php"><i class="fa-solid fa-book"></i> INVENTARIO</a>
                                 </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Añadir.php">Añadir Producto</a>
+                      <a class="nav-link" href="Añadir.php"><i class="fa-solid fa-plus"></i> AÑADIR PRODUCTO</a>
                     </li>
                   </ul>
                 </div>
@@ -39,9 +39,12 @@
               <!-- table -->    
             <div class="Cont-b-t">
               <div class="busqueda">
-                <a class="link" href="Busqueda.php"><button type="button busq" class="btn btn-outline-info">Editar Busqueda</button></a>
+                <a class="link" href="Busqueda.php"><button type="button busq" class="btn btn-outline-info">
+                  <i class="fa-sharp fa-regular fa-pen-to-square fa-fade"></i>  Editar Busqueda</button></a>
               </div>
-              <h1 class="card-title" >productos del inventario</h1>
+              <div class="card-title">
+              <h1 class="title" >productos</h1>
+              </div>
               <div class="cont-table" >
                 <table class="table table-success table-hover table-striped">
                     <thead class="table-primary">
@@ -51,7 +54,7 @@
                         <th scope="col">Precio</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-center"">
                       <?php
                         foreach($productos as $pro){
                           echo"<tr>";
@@ -68,7 +71,8 @@
         </header>
       </div>
     </div>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/45f871d301.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>
 </html>

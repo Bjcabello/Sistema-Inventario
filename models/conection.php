@@ -26,7 +26,7 @@ public function getProducts(){
     // Se retornan los registros obtenidos de la base de datos 
     return $datos;
 }
-// Funcion para pedir productos generales
+// Funcion para pedir productos generales (busqueda)
 public function Product($Nombre){
         // Realizamos la peticion a la base de datos con la condicion
         // Si el campo nombre es igual a la variable "$Nombre" me regrese todo el contenido
@@ -42,12 +42,11 @@ public function Product($Nombre){
         return $datos;
     
 }
-
+//Funcion para editar los productos
 public function EditProduct($id){
    // Realizamos la peticion a la base de datos con la condicion
         // Si el campo nombre es igual a la variable "$Nombre" me regrese todo el contenido
     $peticion = $this->conect->query("SELECT *FROM productos WHERE id_productos = '$id'");
-
     $datos=[];
     $i = 0;
  // Recorremos todos los datos y los guardamos en un arreglo seguro
@@ -71,7 +70,7 @@ public function InsertProduct($Nombre,$Descripcion,$Precio){
 
 // Funcion para Eliminar productos
 
-public function DeleteProduct($id){
+public function  DeleteProduct($id){
 
     $peticion = $this->conect->query("DELETE FROM productos WHERE id_productos = '$id'");
 }

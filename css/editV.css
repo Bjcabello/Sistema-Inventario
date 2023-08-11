@@ -123,3 +123,21 @@ td{
     width: 100%;
     height: 100%;
 }
+@media screen and (max-width: 600px) {
+    .table{
+        width: 100%;
+        height: auto;
+        word-wrap: break-word;   
+    }
+    th{
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    td{
+        margin: 0px;
+        padding: 0px;
+        width: 100px;
+        height: auto;
+    }
+}  

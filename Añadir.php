@@ -22,13 +22,13 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="collapse navbar-collapse text-center" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+                                    <a class="nav-link active" aria-current="page" href="index.php"><i class="fa-solid fa-house"></i> INICIO</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Inventario.php">Inventario</a>
+                                    <a class="nav-link" href="Inventario.php"><i class="fa-solid fa-book"></i> INVENTARIO</a>
                                 </li>
                             </ul>
                         </div>
@@ -38,16 +38,18 @@
                 <div class="formulario">
                     <form action="controller/C_Add.php" method="post">
                     <h5 class="card-title">Ingresar datos del producto</h5>
-                    <input type="text" id="disabledTextInput" name="Nombre" class="form-control" placeholder="Añadir nombre del producto">
-                    <textarea class="form-control" name="Descripcion" placeholder="Añade la descripcion del producto" id="floatingTextarea"></textarea>
-                    <input type="text" id="disabledTextInput" name="Nombre" class="form-control precio" placeholder="Añade el precio">
-                    <button class="btn btn-primary" type="submit">Añadir producto al inventario</button>
+                    <input type="text"  name="Nombre" class="form-control" placeholder="Añadir nombre del producto">
+                    <textarea class="form-control" name="Descripcion" placeholder="Añade la descripcion del producto"></textarea>
+                    <input type="text"  name="Precio" class="form-control precio" placeholder="Añade el precio">
+                    <button class="btn btn-primary" type="submit" onclick="msnInsert(2)" ><i class="fa-sharp fa-solid fa-file-circle-plus"></i>  Añadir Producto</button>
                     </form>
                 </div>     
             </div> 
         </header>    
     </div>     
 </div>
+<script src="js/function.js"></script>
+<script src="https://kit.fontawesome.com/45f871d301.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>
